@@ -1,4 +1,5 @@
 body{
+  min-width: 680px;
   background-color: #3C066C  ;
   margin: 0;
   padding: 0;
@@ -99,12 +100,14 @@ margin: auto;
 .texte h2{
   margin: 0;
   margin-bottom: 40px;
+  margin-left: 30px;
 }
 
 .texte p{
   width: 70%;
   min-width: 300px;
   margin-bottom: 40px;
+  margin-left: 30px;
   }
 
 .texte a{
@@ -153,17 +156,36 @@ flex-direction: column;
 
 .rocket{
   z-index: 1;
-
-
 }
+
+.savoir{
+
+  position: absolute;
+  top: 32%;
+  left:55%;
+  font-size: 18px;
+  background-color: white;
+  padding:10px;
+  border-radius: 20px;
+  border: 1px solid black;
+  color: black;
+  z-index: 5;
+  visibility: hidden;
+}
+
 
 
 .dot{
   position: absolute;
-  top: 40%;
+  top: 35%;
   left:46%;
   z-index: 1;
 }
+.dot:hover + .savoir{
+  visibility: visible;
+}
+
+
 .liste{
   display: flex;
   margin:  auto;
@@ -217,9 +239,17 @@ flex-direction: column;
 }
 
 @media screen and (max-width : 1660px){
-  .global{
+  .global  {
+    width:80%;
+  }
+}
+@media screen and (max-width : 1000px){
+  .global   {
+    width:90%;
+  }
+}
+@media screen and (max-width : 850px){
+  .global   {
     width:100%;
   }
-
-
 }
